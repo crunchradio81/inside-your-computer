@@ -1,0 +1,47 @@
+import org.gradle.api.tasks.Exec
+
+plugins {
+    id("com.android.application")
+    id("org.jetbrains.kotlin.android")
+}
+
+android {
+    namespace = "com.retrothemes.insideyourcomputer"
+    compileSdk = 35
+
+    defaultConfig {
+        applicationId = "com.retrothemes.insideyourcomputer"
+        minSdk = 26
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildFeatures {
+        buildConfig = true
+    }
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+val prepareWebAssets = tasks.register<Exec>("prepareWebAssets") {
+    workingDir(rootProject.projectDir)
+    commandLine("python3", "prepare_assets.py")
+}
+
+tasks.named("preBuild") {
+    dependsOn(prepareWebAssets)
+}
+
+dependencies {
+    implementation("androidx.core:core-ktx:1.15.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.activity:activity-ktx:1.10.0")
+}
