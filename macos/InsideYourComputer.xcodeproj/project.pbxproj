@@ -1,0 +1,89 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A10000000000000000000001 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000001 /* App.swift */; };
+		A10000000000000000000002 /* FaithfulRenderer.swift in Preview Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* FaithfulRenderer.swift */; };
+		A10000000000000000000003 /* RendererResources in Preview Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* RendererResources */; };
+		A10000000000000000000004 /* SwiftUI.framework in Preview Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000010 /* SwiftUI.framework */; };
+		A10000000000000000000005 /* AppKit.framework in Preview Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* AppKit.framework */; };
+		A10000000000000000000006 /* AVFoundation.framework in Preview Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* AVFoundation.framework */; };
+
+		A10000000000000000000011 /* ScreenSaverView.swift in Saver Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000004 /* ScreenSaverView.swift */; };
+		A10000000000000000000012 /* FaithfulRenderer.swift in Saver Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000002 /* FaithfulRenderer.swift */; };
+		A10000000000000000000013 /* RendererResources in Saver Resources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000003 /* RendererResources */; };
+		A10000000000000000000014 /* AppKit.framework in Saver Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000011 /* AppKit.framework */; };
+		A10000000000000000000015 /* AVFoundation.framework in Saver Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000012 /* AVFoundation.framework */; };
+		A10000000000000000000016 /* ScreenSaver.framework in Saver Frameworks */ = {isa = PBXBuildFile; fileRef = A20000000000000000000013 /* ScreenSaver.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A20000000000000000000001 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		A20000000000000000000002 /* FaithfulRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaithfulRenderer.swift; sourceTree = "<group>"; };
+		A20000000000000000000003 /* RendererResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = RendererResources; sourceTree = "<group>"; };
+		A20000000000000000000004 /* ScreenSaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsideYourComputerScreenSaverView.swift; sourceTree = "<group>"; };
+		A20000000000000000000005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20000000000000000000006 /* InsideYourComputer Preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "InsideYourComputer Preview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000007 /* Inside your Computer.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Inside your Computer.saver"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A20000000000000000000010 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A20000000000000000000011 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		A20000000000000000000012 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A20000000000000000000013 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A30000000000000000000001 /* Preview Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000004, A10000000000000000000005, A10000000000000000000006, ); runOnlyForDeploymentPostprocessing = 0; };
+		A30000000000000000000011 /* Saver Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000014, A10000000000000000000015, A10000000000000000000016, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A40000000000000000000001 = {isa = PBXGroup; children = (A40000000000000000000002, A40000000000000000000003, A40000000000000000000004, A40000000000000000000005, A40000000000000000000006, ); sourceTree = "<group>"; };
+		A40000000000000000000002 /* PreviewApp */ = {isa = PBXGroup; children = (A20000000000000000000001, ); path = PreviewApp; sourceTree = "<group>"; };
+		A40000000000000000000003 /* Shared */ = {isa = PBXGroup; children = (A20000000000000000000002, A20000000000000000000003, ); path = Shared; sourceTree = "<group>"; };
+		A40000000000000000000004 /* ScreenSaver */ = {isa = PBXGroup; children = (A20000000000000000000004, A20000000000000000000005, ); path = ScreenSaver; sourceTree = "<group>"; };
+		A40000000000000000000005 /* Products */ = {isa = PBXGroup; children = (A20000000000000000000006, A20000000000000000000007, ); name = Products; sourceTree = "<group>"; };
+		A40000000000000000000006 /* Frameworks */ = {isa = PBXGroup; children = (A20000000000000000000010, A20000000000000000000011, A20000000000000000000012, A20000000000000000000013, ); name = Frameworks; sourceTree = "<group>"; };
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A50000000000000000000001 /* InsideYourComputer Preview */ = {isa = PBXNativeTarget; buildConfigurationList = A60000000000000000000002; buildPhases = (A30000000000000000000002, A30000000000000000000001, A30000000000000000000003, ); buildRules = (); dependencies = (); name = "InsideYourComputer Preview"; productName = "InsideYourComputer Preview"; productReference = A20000000000000000000006; productType = "com.apple.product-type.application"; };
+		A50000000000000000000002 /* Inside Your Computer Saver */ = {isa = PBXNativeTarget; buildConfigurationList = A60000000000000000000003; buildPhases = (A30000000000000000000012, A30000000000000000000011, A30000000000000000000013, ); buildRules = (); dependencies = (); name = "Inside Your Computer Saver"; productName = "Inside your Computer"; productReference = A20000000000000000000007; productType = "com.apple.product-type.bundle"; };
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A70000000000000000000001 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastSwiftUpdateCheck = 1600; LastUpgradeCheck = 1600; TargetAttributes = {A50000000000000000000001 = {CreatedOnToolsVersion = 16.0;}; A50000000000000000000002 = {CreatedOnToolsVersion = 16.0;};};}; buildConfigurationList = A60000000000000000000001; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base, ); mainGroup = A40000000000000000000001; productRefGroup = A40000000000000000000005; projectDirPath = ""; projectRoot = ""; targets = (A50000000000000000000001, A50000000000000000000002, ); };
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A30000000000000000000003 /* Preview Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000003, ); runOnlyForDeploymentPostprocessing = 0; };
+		A30000000000000000000013 /* Saver Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000013, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A30000000000000000000002 /* Preview Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000001, A10000000000000000000002, ); runOnlyForDeploymentPostprocessing = 0; };
+		A30000000000000000000012 /* Saver Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000011, A10000000000000000000012, ); runOnlyForDeploymentPostprocessing = 0; };
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		A80000000000000000000001 /* Project Debug */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_VERSION = 5.0;}; name = Debug; };
+		A80000000000000000000002 /* Project Release */ = {isa = XCBuildConfiguration; buildSettings = {ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; MACOSX_DEPLOYMENT_TARGET = 14.0; SDKROOT = macosx; SWIFT_COMPILATION_MODE = wholemodule; SWIFT_OPTIMIZATION_LEVEL = "-O"; SWIFT_VERSION = 5.0;}; name = Release; };
+
+		A80000000000000000000011 /* Preview Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; ENABLE_DEBUG_DYLIB = NO; ENABLE_PREVIEWS = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "InsideYourComputer Preview"; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment"; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.crunchradio.InsideYourComputer.Preview; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0;}; name = Debug; };
+		A80000000000000000000012 /* Preview Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; ENABLE_DEBUG_DYLIB = NO; ENABLE_PREVIEWS = NO; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = "InsideYourComputer Preview"; INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment"; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.crunchradio.InsideYourComputer.Preview; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0;}; name = Release; };
+
+		A80000000000000000000021 /* Saver Debug */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; ENABLE_DEBUG_DYLIB = NO; ENABLE_PREVIEWS = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = ScreenSaver/Info.plist; MACH_O_TYPE = mh_bundle; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.crunchradio.InsideYourComputer.ScreenSaver; PRODUCT_MODULE_NAME = InsideYourComputerScreenSaver; PRODUCT_NAME = "Inside your Computer"; SKIP_INSTALL = YES; SWIFT_VERSION = 5.0; WRAPPER_EXTENSION = saver;}; name = Debug; };
+		A80000000000000000000022 /* Saver Release */ = {isa = XCBuildConfiguration; buildSettings = {CODE_SIGN_STYLE = Automatic; ENABLE_DEBUG_DYLIB = NO; ENABLE_PREVIEWS = NO; GENERATE_INFOPLIST_FILE = NO; INFOPLIST_FILE = ScreenSaver/Info.plist; MACH_O_TYPE = mh_bundle; MACOSX_DEPLOYMENT_TARGET = 14.0; PRODUCT_BUNDLE_IDENTIFIER = com.crunchradio.InsideYourComputer.ScreenSaver; PRODUCT_MODULE_NAME = InsideYourComputerScreenSaver; PRODUCT_NAME = "Inside your Computer"; SKIP_INSTALL = YES; SWIFT_VERSION = 5.0; WRAPPER_EXTENSION = saver;}; name = Release; };
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A60000000000000000000001 /* Project config */ = {isa = XCConfigurationList; buildConfigurations = (A80000000000000000000001, A80000000000000000000002, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A60000000000000000000002 /* Preview config */ = {isa = XCConfigurationList; buildConfigurations = (A80000000000000000000011, A80000000000000000000012, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+		A60000000000000000000003 /* Saver config */ = {isa = XCConfigurationList; buildConfigurations = (A80000000000000000000021, A80000000000000000000022, ); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+/* End XCConfigurationList section */
+	};
+	rootObject = A70000000000000000000001;
+}
