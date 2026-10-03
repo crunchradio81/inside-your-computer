@@ -1,0 +1,47 @@
+name: Build macOS
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "macos/**"
+      - "index.html"
+      - ".github/workflows/macos.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare shared assets
+        run: python3 macos/prepare_renderer_assets.py
+
+      - name: Build native saver
+        run: |
+          xcodebuild \
+            -project macos/InsideYourComputer.xcodeproj \
+            -scheme "Inside Your Computer Saver" \
+            -configuration Release \
+            -derivedDataPath "$RUNNER_TEMP/InsideYourComputerDerivedData" \
+            CODE_SIGNING_ALLOWED=NO \
+            build
+
+      - name: Package saver
+        run: |
+          ditto -c -k --sequesterRsrc --keepParent \
+            "$RUNNER_TEMP/InsideYourComputerDerivedData/Build/Products/Release/Inside your Computer.saver" \
+            "$RUNNER_TEMP/InsideYourComputer-macOS-Saver.zip"
+
+      - name: Upload saver
+        uses: actions/upload-artifact@v4
+        with:
+          name: InsideYourComputer-macOS-Saver
+          path: ${{ runner.temp }}/InsideYourComputer-macOS-Saver.zip
+          if-no-files-found: error
