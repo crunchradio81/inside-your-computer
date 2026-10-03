@@ -1,0 +1,20 @@
+#!/bin/sh
+set -eu
+
+GRADLE_VERSION="8.10.2"
+BASE_DIR="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+CACHE="$HOME/.gradle/insideyourcomputer-bootstrap"
+DIST="$CACHE/gradle-$GRADLE_VERSION"
+ZIP="$CACHE/gradle-$GRADLE_VERSION-bin.zip"
+
+if [ ! -x "$DIST/bin/gradle" ]; then
+  mkdir -p "$CACHE"
+  if [ ! -f "$ZIP" ]; then
+    echo "Downloading Gradle $GRADLE_VERSION..."
+    curl -L --fail --retry 3       "https://services.gradle.org/distributions/gradle-$GRADLE_VERSION-bin.zip"       -o "$ZIP"
+  fi
+  rm -rf "$DIST"
+  unzip -q "$ZIP" -d "$CACHE"
+fi
+
+exec "$DIST/bin/gradle" -p "$BASE_DIR" "$@"
